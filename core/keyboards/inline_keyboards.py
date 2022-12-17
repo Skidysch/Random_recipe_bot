@@ -12,7 +12,7 @@ def get_start_keyboard() -> InlineKeyboardMarkup:
 def get_shuffle_keyboard(url: str) -> InlineKeyboardMarkup:
     shuffle_keyboard = InlineKeyboardBuilder()
     shuffle_keyboard.button(text='Yes, I would love to cook this one!', url=url)
-    shuffle_keyboard.button(text='No, i want to get another recipe', callback_data='shuffle')
+    shuffle_keyboard.button(text='No, i want to get another recipe', callback_data='reshuffle')
 
     shuffle_keyboard.adjust(1)
     return shuffle_keyboard.as_markup()
